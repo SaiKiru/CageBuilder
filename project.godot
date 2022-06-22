@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "Cage",
+"language": "GDScript",
+"path": "res://objects/Cage.gd"
+} ]
+_global_script_class_icons={
+"Cage": "",
+}
+
 [application]
 
 config/name="Cage Builder"
