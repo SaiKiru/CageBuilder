@@ -18,8 +18,10 @@ func _input(event) -> void:
 			_mouse_initial_position = Vector2(0, 0)
 
 	if event is InputEventMouseMotion and _mouse_is_pressed:
-		var rotation_value = deg2rad(event.position.x - _mouse_initial_position.x) / -200
+		var rotation_value = deg2rad(event.position.x - _mouse_initial_position.x) / -4
 		_rotate_camera(rotation_value)
+		
+		_mouse_initial_position = event.position
 
 
 func _rotate_camera(value) -> void:
