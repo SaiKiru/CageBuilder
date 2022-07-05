@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Cage",
 "language": "GDScript",
 "path": "res://objects/Cage.gd"
+}, {
+"base": "Spatial",
+"class": "CagePanel",
+"language": "GDScript",
+"path": "res://objects/CagePanel.gd"
 } ]
 _global_script_class_icons={
 "Cage": "",
+"CagePanel": ""
 }
 
 [application]
