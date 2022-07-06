@@ -13,15 +13,31 @@ _global_script_classes=[ {
 "class": "Cage",
 "language": "GDScript",
 "path": "res://objects/Cage.gd"
+}, {
+"base": "Spatial",
+"class": "CagePanel",
+"language": "GDScript",
+"path": "res://objects/CagePanel.gd"
+}, {
+"base": "Wall",
+"class": "Door",
+"language": "GDScript",
+"path": "res://objects/Door.gd"
 } ]
 _global_script_class_icons={
 "Cage": "",
+"CagePanel": "",
+"Wall": ""
 }
 
 [application]
 
 config/name="Cage Builder"
 config/icon="res://icon.png"
+
+[autoload]
+
+Utils="*res://autoload/utils.gd"
 
 [physics]
 
