@@ -26,6 +26,10 @@ func _input(event) -> void:
 			_mode = Modes.MOVE
 		elif type == BUTTON_LEFT:
 			_mode = Modes.DRAW
+		elif type == BUTTON_WHEEL_UP:
+			_zoom_in()
+		elif type == BUTTON_WHEEL_DOWN:
+			_zoom_out()
 
 		# store event details
 		if event.is_pressed():
@@ -59,6 +63,14 @@ func _reset_mouse_event():
 
 func _rotate_camera(value) -> void:
 	_camera_helper.rotate_y(value)
+
+
+func _zoom_in() -> void:
+	_camera.translate_object_local(Vector3(0, 0, -0.10))
+
+
+func _zoom_out() -> void:
+	_camera.translate_object_local(Vector3(0, 0, 0.10))
 
 
 func _move_guide_arrow(position: Vector3) -> void:
